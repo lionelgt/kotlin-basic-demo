@@ -9,6 +9,7 @@ import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.MvcResult
 import org.springframework.test.web.servlet.setup.MockMvcBuilders
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class HelloDemoControllerTest {
@@ -25,5 +26,17 @@ class HelloDemoControllerTest {
     fun `Check Hello someone! response`(){
         val mvcResult: MvcResult  = mockMvc.perform(MockMvcRequestBuilders.get("/api/hello?name=someone")).andReturn()
         Assertions.assertEquals("Hello someone!", mvcResult.response.contentAsString)
+    }
+
+    @Test
+    fun `Check mapper default description response`(){
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/mapper"))
+            .andExpect(MockMvcResultMatchers.jsonPath("$.description").value("Please enter message to test mapStruct!"))
+    }
+
+    @Test
+    fun `Check mapper example! description response`(){
+       mockMvc.perform(MockMvcRequestBuilders.get("/api/mapper?message=mapper example"))
+           .andExpect(MockMvcResultMatchers.jsonPath("$.description").value("mapper example!"))
     }
 }

@@ -1,4 +1,4 @@
-package me.lgonzalest.kotlinbasicdemo.application
+package me.lgonzalest.kotlinbasicdemo.application.controller
 
 import me.lgonzalest.kotlinbasicdemo.application.mapper.DemoMapper
 import me.lgonzalest.kotlinbasicdemo.domain.model.Demo

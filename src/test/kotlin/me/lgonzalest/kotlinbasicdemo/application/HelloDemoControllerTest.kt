@@ -1,5 +1,6 @@
 package me.lgonzalest.kotlinbasicdemo.application
 
+import me.lgonzalest.kotlinbasicdemo.application.controller.HelloDemoController
 import me.lgonzalest.kotlinbasicdemo.application.mapper.DemoMapper
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test

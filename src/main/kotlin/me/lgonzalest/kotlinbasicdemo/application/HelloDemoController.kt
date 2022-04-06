@@ -2,7 +2,7 @@ package me.lgonzalest.kotlinbasicdemo.application
 
 import me.lgonzalest.kotlinbasicdemo.application.mapper.DemoMapper
 import me.lgonzalest.kotlinbasicdemo.domain.model.Demo
-import me.lgonzalest.kotlinbasicdemo.application.request.DemoResponse
+import me.lgonzalest.kotlinbasicdemo.application.response.DemoResponse
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
